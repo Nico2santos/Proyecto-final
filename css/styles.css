@@ -110,6 +110,8 @@ h6 {
   text-decoration: none;
 }
 
+/*Ventas*/
+
 .q5-2017 {
   width: 300px;
 }
@@ -118,4 +120,12 @@ h6 {
 }
 .a6-2017 {
   width: 300px;
+}
+
+.text-q5 {
+  margin-left: 90px;
+}
+
+.text-q7 {
+  margin-left: 90px;
 }
