@@ -133,6 +133,12 @@ h6 {
 .text-a6 {
   margin-left: 90px;
 }
+
+h2 {
+  font-size: 25px;
+  font-weight: bold;
+}
+
 .new {
   position: absolute;
   margin-top: 10px;
