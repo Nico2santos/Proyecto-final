@@ -95,228 +95,39 @@
     </nav>
 
     <div class="container">
-      <div class="row py-4">
-        <h1>Ventas</h1>
-        <hr />
-      </div>
+      <h1>Ventas</h1>
+      <hr />
       <div class="row">
-        <div class="col-2">
-          <div class="p-3 bg-body-tertiary rounded" id="main-card">
-            <form>
-              <fieldset disabled>
-                <legend>Filtro</legend>
-                <hr />
-                <div class="mb-3">
-                  <label
-                    for="disabledTextInput"
-                    class="form-label"
-                    style="font-weight: bold"
-                    >Año</label
-                  >
-                  <input
-                    type="text"
-                    id="disabledTextInput"
-                    class="bg-body form-control"
-                    placeholder="2017"
-                  />
-                </div>
-                <div class="mb-3">
-                  <label
-                    for="disabledSelect"
-                    class="form-label"
-                    style="font-weight: bold"
-                    >Marca</label
-                  >
-                  <select id="disabledSelect" class="bg-body form-select">
-                    <option>Seleccionar...</option>
-                  </select>
-                </div>
-                <div class="mb-3">
-                  <label
-                    for="disabledSelect"
-                    class="form-label"
-                    style="font-weight: bold"
-                    >Modelo</label
-                  >
-                  <select id="disabledSelect" class="form-select">
-                    <option>Seleccionar...</option>
-                  </select>
-                </div>
-                <div class="mb-3">
-                  <label
-                    for="disabledSelect"
-                    class="form-label"
-                    style="font-weight: bold"
-                    >Estado</label
-                  >
-                  <select id="disabledSelect" class="bg-body form-select">
-                    <option>Seleccionar...</option>
-                  </select>
-                </div>
-                <div class="mb-3"></div>
-                <button
-                  type="submit"
-                  class="button-filter btn btn-warning text-white"
-                  style="background-color: #ff8f00"
-                >
-                  <i class="bi bi-search"></i> Filtrar
-                </button>
-              </fieldset>
-            </form>
-          </div>
-        </div>
-        <div class="col-10">
-          <div class="row">
-            <div class="col-3 position-relative">
-              <span class="new text-white badge">Nuevo</span>
-              <img
-                src="img/cars_sales/audi_q5_2017.jpg"
-                style="border: 1px solid #e7e7e7; padding: 4px"
-                class="q5-2017"
-                alt=""
-              />
-            </div>
-            <div class="col-9">
-              <div class="text-q5">
-                <h2 class="position-relative">Audi Q5</h2>
-                <div class="q5">
-                  <p>
-                    2017 | USD 92.000 |<span style="color: rgb(255, 225, 0)"
-                      ><i class="bi bi-star-fill"></i> </span
-                    ><span style="color: rgb(255, 225, 0)"
-                      ><i class="bi bi-star-fill"></i> </span
-                    ><span style="color: rgb(255, 225, 0)"
-                      ><i class="bi bi-star-fill"></i> </span
-                    ><span style="color: rgb(255, 225, 0)"
-                      ><i class="bi bi-star-fill"></i> </span
-                    ><span style="color: rgb(255, 225, 0)"
-                      ><i class="bi bi-star-fill"></i>
-                    </span>
-                  </p>
-                </div>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
-                  nobis atque consequuntur exercitationem cupiditate reiciendis
-                  adipisci eligendi magnam. Nobis facilis debitis, ex explicabo
-                  adipisci dolorum blanditiis laboriosam sint ut voluptas.
-                </p>
-                <button type="button" class="btn btn-success">
-                  <i class="bi bi-cart3"></i> Comprar
-                </button>
-                <button type="button" class="btn btn-light">
-                  <i class="bi bi-plus-square"></i>
-                  Más información
-                </button>
-                <button type="button" class="btn btn-light">
-                  <i class="bi bi-folder-symlink"></i>
-                  Compartir
-                </button>
-              </div>
-            </div>
-          </div>
+        <div class="col-12 col-lg-2 mt-3 bg-secondary-subtle p-3 h-50">
+          Filtro
           <hr />
-          <div class="row">
-            <div class="col-3">
-              <img
-                src="img/cars_sales/audi_q7_2017.jpg"
-                style="border: 1px solid #e7e7e7; padding: 4px"
-                class="q7-2017"
-                alt=""
-              />
-            </div>
-            <div class="col-9">
-              <div class="text-q7">
-                <h2 class="position-relative">Audi Q7</h2>
-                <div class="q7">
-                  <p>
-                    2017 | USD 110.000 |<span style="color: rgb(255, 225, 0)"
-                      ><i class="bi bi-star-fill"></i> </span
-                    ><span style="color: rgb(255, 225, 0)"
-                      ><i class="bi bi-star-fill"></i> </span
-                    ><span style="color: rgb(255, 225, 0)"
-                      ><i class="bi bi-star-fill"></i> </span
-                    ><span style="color: rgb(255, 225, 0)"
-                      ><i class="bi bi-star"></i
-                    ></span>
-                    <span style="color: rgb(255, 225, 0)"
-                      ><i class="bi bi-star"></i
-                    ></span>
-                  </p>
-                </div>
-                <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Temporibus, eius? Officiis consequatur, earum vel,
-                  exercitationem corporis error laborum cupiditate dolore
-                  quibusdam quis, fugiat ratione unde labore. Odio ad optio
-                  enim.
-                </p>
-                <button type="button" class="btn btn-success">
-                  <i class="bi bi-cart3"></i> Comprar
-                </button>
-                <button type="button" class="btn btn-light">
-                  <i class="bi bi-plus-square"></i>
-                  Más información
-                </button>
-                <button type="button" class="btn btn-light">
-                  <i class="bi bi-folder-symlink"></i>
-                  Compartir
-                </button>
-              </div>
-            </div>
-          </div>
-          <hr />
-          <div class="row">
-            <div class="col-3">
-              <img
-                src="img/cars_sales/audi_a6_quattro_2016.jpg"
-                style="border: 1px solid #e7e7e7; padding: 4px"
-                class="a6-2017"
-                alt=""
-              />
-            </div>
-            <div class="col-9">
-              <div class="text-a6">
-                <h2 class="position-relative">Audi A6</h2>
-                <div class="a6">
-                  <p>
-                    2016 | USD 98.000 |<span style="color: rgb(255, 225, 0)"
-                      ><i class="bi bi-star-fill"></i> </span
-                    ><span style="color: rgb(255, 225, 0)"
-                      ><i class="bi bi-star-fill"></i> </span
-                    ><span style="color: rgb(255, 225, 0)"
-                      ><i class="bi bi-star-fill"></i> </span
-                    ><span style="color: rgb(255, 225, 0)"
-                      ><i class="bi bi-star-fill"></i>
-                    </span>
-                    <span style="color: rgb(255, 225, 0)"
-                      ><i class="bi bi-star"></i
-                    ></span>
-                  </p>
-                </div>
-
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
-                  vero sint aliquid natus facilis provident ad, ipsum culpa
-                  quidem error obcaecati tempora fugit iste eos perferendis
-                  quas. Repellendus, dolorem modi.
-                </p>
-                <button type="button" class="btn btn-success">
-                  <i class="bi bi-cart3"></i> Comprar
-                </button>
-                <button type="button" class="btn btn-light">
-                  <i class="bi bi-plus-square"></i>
-                  Más información
-                </button>
-                <button type="button" class="btn btn-light">
-                  <i class="bi bi-folder-symlink"></i>
-                  Compartir
-                </button>
-              </div>
-            </div>
-          </div>
+          <b>Año</b>
+          <select class="form-select" id="selectYear">
+            <option value="1" disabled selected>Seleccionar...</option>
+          </select>
+          <b>Marca</b>
+          <select class="form-select" class="marcas" id="selectBrand">
+            <option value="1" disabled selected>Seleccionar...</option>
+          </select>
+          <b>Modelo</b>
+          <select class="form-select" id="selectModel">
+            <option value="1" disabled selected>Seleccionar...</option>
+          </select>
+          <b>Estado</b>
+          <select class="form-select" id="selectStatus">
+            <option selected="" disabled selected>Seleccionar...</option>
+          </select>
+          <form class="mt-3 mb-4" action="">
+            <button class="filtrarAuto" type="submit" id="searchButton">
+              <i class="fa fa-search"></i>
+              Filtrar
+            </button>
+          </form>
         </div>
       </div>
     </div>
+
+    <div class="col-12 col-lg-10" id="prueba"></div>
 
     <div
       id="contacto-modal"
