@@ -108,61 +108,23 @@ h6 {
 }
 
 /*Ventas*/
-.button-filter {
-  width: 135px;
-}
 
-.q5-2017 {
-  width: 300px;
-}
-.q7-2017 {
-  width: 300px;
-}
-.a6-2017 {
-  width: 300px;
-}
-
-.text-q5 {
-  margin-left: 90px;
-}
-
-.text-q7 {
-  margin-left: 90px;
-}
-
-.text-a6 {
-  margin-left: 90px;
-}
-
-h2 {
-  font-size: 25px;
-  font-weight: bold;
-}
-
-.new {
-  position: absolute;
-  margin-top: 10px;
-  margin-left: 20px;
-  background-color: #ff8f00;
-}
-.q5 {
-  position: absolute;
-  margin-top: -35px;
-  margin-left: 380px;
-  font-weight: 500;
-}
-.q7 {
-  position: absolute;
-  margin-top: -35px;
-  margin-left: 380px;
-  font-weight: 500;
-}
-.a6 {
-  position: absolute;
-  margin-top: -35px;
-  margin-left: 380px;
-  font-weight: 500;
-}
 .items {
   color: darkblue;
+}
+
+#comprar {
+  color: white;
+}
+
+.stars {
+  position: relative;
+  margin-top: 10px;
+}
+
+.car {
+  height: 200px;
+  width: 100%;
+  border: 1px solid #e7e7e7;
+  padding: 4px;
 }
