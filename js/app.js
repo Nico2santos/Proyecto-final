@@ -3,6 +3,7 @@
 const seleccionAnio = document.querySelector("#seleccionAnio");
 const anioActual = new Date().getFullYear();
 const test = document.querySelector("#test");
+const marca = document.querySelector("#seleccionMarca");
 
 for (let year = anioActual; year >= 1900; year--) {
   const option = document.createElement("option");
