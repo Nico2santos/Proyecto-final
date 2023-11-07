@@ -9,8 +9,34 @@ for (let year = anioActual; year >= 1900; year--) {
   const option = document.createElement("option");
   option.value = year;
   option.text = year;
-  selectYear.appendChild(option);
+  seleccionAnio.appendChild(option);
 }
+
+fetch("https://ha-front-api-proyecto-final.vercel.app/brands")
+  .then(function (res) {
+    return res.json();
+  })
+  .then(function (marcas) {
+    for (let marca of marcas) {
+      const option = document.createElement("option");
+      option.value = marca;
+      option.text = marca;
+      seleccionMarca.appendChild(option);
+    }
+  });
+
+fetch("https://ha-front-api-proyecto-final.vercel.app/models?brand=Audi")
+  .then(function (res) {
+    return res.json();
+  })
+  .then(function (modelos) {
+    for (let modelo of modelos) {
+      const option = document.createElement("option");
+      option.value = modelo;
+      option.text = modelo;
+      seleccionModelo.appendChild(option);
+    }
+  });
 
 fetch("https://ha-front-api-proyecto-final.vercel.app/cars")
   .then(function (res) {
