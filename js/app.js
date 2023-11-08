@@ -44,7 +44,7 @@ fetch("https://ha-front-api-proyecto-final.vercel.app/cars")
   })
   .then(function (cars) {
     for (let car of cars) {
-      const carElement = buildCarDivs(car)
+      const carElement = buildCarDivs(car);
       prueba.insertAdjacentHTML("beforeend", carElement);
     }
     console.log("hola");
@@ -53,66 +53,63 @@ fetch("https://ha-front-api-proyecto-final.vercel.app/cars")
     console.error("Error al obtener los datos: " + error);
   });
 
+const searchButton = document.querySelector("#searchButton");
 
-  const searchButton = document.querySelector('#searchButton');
+searchButton.addEventListener("click", filterCars);
 
-  searchButton.addEventListener('click', filterCars);
+function filterCars() {
+  event.preventDefault();
 
-  function filterCars (){
-    event.preventDefault();
+  const carContainer = document.querySelector("#prueba");
+  carContainer.innerHTML = "";
 
-    const carContainer = document.querySelector('#prueba');
-    carContainer.innerHTML = "";
+  let carDiv = "";
 
-    let carDiv = "";
+  const year = document.querySelector("#seleccionAnio");
+  const marca = document.querySelector("#seleccionMarca");
+  const modelo = document.querySelector("#seleccionModelo");
+  const status = document.querySelector("#selectStatus");
 
+  const yearValue = year.value;
+  const marcaValue = marca.value;
+  const modeloValue = modelo.value;
+  const statusValue = status.value;
 
-    const year = document.querySelector('#seleccionAnio');
-    const marca = document.querySelector('#seleccionMarca');
-    const modelo = document.querySelector('#seleccionModelo');
-    const status = document.querySelector('#selectStatus');
+  console.log(yearValue);
+  console.log(marcaValue);
+  console.log(modeloValue);
+  console.log(statusValue);
 
-    const yearValue = year.value;
-    const marcaValue = marca.value;
-    const modeloValue = modelo.value;
-    const statusValue = status.value;
+  url = "https://ha-front-api-proyecto-final.vercel.app/cars";
 
-    console.log(yearValue);
-    console.log(marcaValue);
-    console.log(modeloValue);
-    console.log(statusValue);
-
-    url = 'https://ha-front-api-proyecto-final.vercel.app/cars';
-
-    fetch(url)
-    .then(function(response){
-      if(response.ok){
+  fetch(url)
+    .then(function (response) {
+      if (response.ok) {
         return response.json();
       }
-    }).then(function(data){
-      data.forEach(element => {
-
+    })
+    .then(function (data) {
+      data.forEach((element) => {
         if (
           (yearValue === "1" || element.year == yearValue) &&
           (marcaValue === "1" || element.brand == marcaValue) &&
           (modeloValue === "1" || element.model == modeloValue) &&
           (statusValue === "1" || element.status == statusValue)
         ) {
-          carDiv= buildCarDivs(element);
+          carDiv = buildCarDivs(element);
           prueba.insertAdjacentHTML("beforeend", carDiv);
-        } 
-        
+        }
       });
-      if(carDiv == ""){
-        alert ("No se ha encontrado ningún vehiculo para los filtros seleccionados");
+      if (carDiv == "") {
+        alert(
+          "No se ha encontrado ningún vehiculo para los filtros seleccionados"
+        );
       }
-    })
+    });
+}
 
-  }
-
-
-  function buildCarDivs(element){
-    const carDiv = `
+function buildCarDivs(element) {
+  const carDiv = `
     <div class="row">
         <div class="col-12 col-lg-4 mb-3">
             <img class="car img-fluid" src="${element.image}"  alt="" />
@@ -145,5 +142,5 @@ fetch("https://ha-front-api-proyecto-final.vercel.app/cars")
       <hr />
       `;
 
-      return carDiv;
-  }
+  return carDiv;
+}
