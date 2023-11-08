@@ -330,7 +330,11 @@
             ></button>
           </div>
           <div class="modal-body">
-            <form>
+            <form
+              id="my-form"
+              action="https://formspree.io/f/xdorjjdz"
+              method="POST"
+            >
               <div class="mb-3">
                 <label for="name" class="form-label">Nombre</label>
                 <input
@@ -361,16 +365,16 @@
                   placeholder="Ingresar mensaje..."
                 ></textarea>
               </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-success"
+                  data-bs-dismiss="modal"
+                >
+                  Enviar
+                </button>
+              </div>
             </form>
-          </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-success"
-              data-bs-dismiss="modal"
-            >
-              Enviar
-            </button>
           </div>
         </div>
       </div>

@@ -107,6 +107,17 @@ function filterCars() {
       }
     });
 }
+function drawstars(rating) {
+  let stars = "";
+  for (let i = 0; i < 5; i++) {
+    if (rating > i) {
+      stars += <i class="bi bi-star-fill text-warning"></i>;
+    } else {
+      stars += <i class="bi bi-star text-warning"></i>;
+    }
+  }
+  return stars;
+}
 
 function buildCarDivs(element) {
   const carDiv = `
@@ -118,12 +129,9 @@ function buildCarDivs(element) {
             <h4 class="position-absolute" >${element.model}</h4>
             <div class="d-flex justify-content-end  >
                 <h5 class="stars">
-                    ${element.year} | $USD${element.price_usd} |
-                    <i class="bi bi-star-fill text-warning"></i>
-                    <i class="bi bi-star-fill text-warning"></i>
-                    <i class="bi bi-star-fill text-warning"></i>
-                    <i class="bi bi-star-fill text-warning"></i>
-                    <i class="bi bi-star text-warning"></i>
+                    ${element.year} | $USD${element.price_usd} ${drawstars(
+    car.rating
+  )}|
                 </h5>
             </div>
             <p class="py-2">${element.description}</p>
