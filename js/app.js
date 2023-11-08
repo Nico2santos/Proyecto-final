@@ -110,10 +110,10 @@ function filterCars() {
 function drawstars(rating) {
   let stars = "";
   for (let i = 0; i < 5; i++) {
-    if (rating > i) {
-      stars += <i class="bi bi-star-fill text-warning"></i>;
+    if (i < rating) {
+      stars += '<i class="bi bi-star-fill text-warning"></i>';
     } else {
-      stars += <i class="bi bi-star text-warning"></i>;
+      stars += '<i class="bi bi-star text-warning"></i>';
     }
   }
   return stars;
@@ -129,9 +129,10 @@ function buildCarDivs(element) {
             <h4 class="position-absolute" >${element.model}</h4>
             <div class="d-flex justify-content-end  >
                 <h5 class="stars">
-                    ${element.year} | $USD${element.price_usd} ${drawstars(
-    car.rating
-  )}|
+                    ${
+                      element.year
+                    } | $USD${element.price_usd.toLocaleString()} |
+                    ${drawstars(element.rating)}
                 </h5>
             </div>
             <p class="py-2">${element.description}</p>
